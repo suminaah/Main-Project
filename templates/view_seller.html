@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> View Seller</title>
+</head>
+<body>
+  <h1>Seller Requests</h1>
+
+  <table border="1">
+    <thead>
+<tr>
+  <th>Name</th>
+  <th>place</th>
+  <th>Phone</th>
+  <th>Mail id</th>
+  <th>Licence no.</th>
+  <th>Status</th</thead>
+</tr>
+{% for i in data ['view']%}
+<tbody>
+<tr>
+<td> {{i['seller_name']}}</td>
+<td> {{i['place']}}</td>
+<td> {{i['phone']}}</td>
+<td> {{i['email']}}</td>
+<td> {{i['licence_no']}}</td>
+<td><a href="?action=approve&id={{i['seller_id']}}">Approve</a>
+<a href="?action=reject&id={{i['seller_id']}}">Reject</a></td>
+{% endfor %}
+</tbody>
+</tr>
+
+ </table>
+
+
+</body>
+</html>

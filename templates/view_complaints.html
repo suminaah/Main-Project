@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Complaints</title>
+</head>
+<body>
+    <h1>Complaints &Feedback</h1>
+    <table border="1">
+<tr>
+  <th>Sender Id</th>
+  <th>Title</th>
+  <th>Description</th>
+  <th>Reply</th>
+  <th>Date</th>
+</tr>
+{% for i in data ['view']%}
+
+<tr>
+<td> {{i['sender_id']}}</td>
+<td> {{i['title']}}</td>
+<td> {{i['description']}}</td>
+<td> {{i['reply']}}</td>
+<td> {{i['date']}}</td>
+{% endfor %}</tr>
+
+</table>
+</body>
+</html>

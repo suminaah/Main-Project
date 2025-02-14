@@ -57,3 +57,9 @@ def viewcomplaints():
     data['view']=ab
     return render_template("view_complaints.html",data=data)
 
+
+@admin.route("/send_reply")
+def send_reply():
+    
+    return render_template("send_reply.html")
+

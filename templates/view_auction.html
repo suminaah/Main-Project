@@ -9,20 +9,29 @@
     <h1>Auction</h1>
     <table border="1">
 <tr>
-  <th>Sender Id</th>
-  <th>Title</th>
-  <th>Description</th>
-  <th>Reply</th>
-  <th>Date</th>
+  <th>Seller Id</th>
+  <th>Product Name</th>
+  <th>Image</th>
+  <th>Details</th>
+  <th>Base Amount</th>
+  <th>Added Date</th>
+  <th>Auction Date Time</th>
+  <th>Winner Id</th>
+  <th>Status</th>
+  
 </tr>
 {% for i in data ['view']%}
 
 <tr>
-<td> {{i['sender_id']}}</td>
-<td> {{i['title']}}</td>
-<td> {{i['description']}}</td>
-<td> {{i['reply']}}</td>
-<td> {{i['date']}}</td>
+<td> {{i['seller_id']}}</td>
+<td> {{i['product_name']}}</td>
+<td> {{i['product_image']}}</td>
+<td> {{i['details']}}</td>
+<td> {{i['base_amount']}}</td>
+<td> {{i['added_date']}}</td>
+<td> {{i['auction_date_time']}}</td>
+<td> {{i['winner_id']}}</td>
+<td> {{i['status']}}</td>
 {% endfor %}</tr>
 
 </table>
